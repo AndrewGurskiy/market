@@ -6,16 +6,18 @@
 </head>
 <body>
 <form action="/user/authorization" th:object="${user}" method="post">
-    <input type="text" th:field="*{username}"/>
+    <input type="text" th:field="*{username}" class="form-control" placeholder="Login" required="" autofocus=""/>
     <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Incorrect date</p>
-    Insert login
     <br>
-    <input type="text" th:field="*{password}"/>
+
+    <br>
+    <input type="text" th:field="*{password}" class="form-control" placeholder="password" required="" autofocus=""/>
     <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Incorrect date</p>
-    Insert password
     <br>
-    <button type="submit">
-        Authorization
+
+    <br>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+
     </button>
 </form>
 </body>

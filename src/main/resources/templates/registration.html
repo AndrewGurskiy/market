@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <title>Registration</title>
 </head>
-<body>
+<body class="text-center">
 <form action="/user/registration" th:object="${user}" method="post">
-    <input type="text" th:field="*{name}"/>
+    <input type="text" th:field="*{name}" class="form-control" placeholder="Your name" required="" autofocus=""/>
     <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Incorrect date</p>
     <br>
-    Insert your name
+
     <br>
-    <input type="text" th:field="*{username}"/>
+    <input type="text" th:field="*{username}" class="form-control" placeholder="Login" required="" autofocus=""/>
     <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Incorrect date</p>
     <br>
-    Insert login
+
     <br>
-    <input type="text" th:field="*{password}"/>
+    <input type="text" th:field="*{password}" class="form-control" placeholder="Your password" required="" autofocus=""/>
     <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Incorrect date</p>
     <br>
-    Insert password
+
     <br>
-    <input type="text" th:field="*{email}"/>
+    <input type="email" th:field="*{email}" class="form-control" placeholder="Your email" required="" autofocus=""/>
     <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Incorrect date</p>
     <br>
-    Insert your email
+
     <br>
     <button type="submit">
         registration
