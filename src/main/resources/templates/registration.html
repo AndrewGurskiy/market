@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<form action="/user/registration" th:object="${user}" method="post">
+    <input type="text" th:field="*{name}"/>
+    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Incorrect date</p>
+    <br>
+    Insert your name
+    <br>
+    <input type="text" th:field="*{username}"/>
+    <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Incorrect date</p>
+    <br>
+    Insert login
+    <br>
+    <input type="text" th:field="*{password}"/>
+    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Incorrect date</p>
+    <br>
+    Insert password
+    <br>
+    <input type="text" th:field="*{email}"/>
+    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Incorrect date</p>
+    <br>
+    Insert your email
+    <br>
+    <button type="submit">
+        registration
+    </button>
+</form>
+</body>
+</html>
